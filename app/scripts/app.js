@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @ngdoc overview
+ * @ngdoc overview1
  * @name myAppApp
  * @description
  * # myAppApp
