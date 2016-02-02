@@ -1,0 +1,35 @@
+https://github.com/angular-slider/angularjs-slider
+
+{
+    floor: 0,
+    ceil: null, //defaults to rz-slider-model
+    step: 1,
+    precision: 0,
+    minRange: 0,
+    id: null,
+    translate: null,
+    stepsArray: null,
+    draggableRange: false,
+    draggableRangeOnly: false,
+    showSelectionBar: false,
+    showSelectionBarEnd: false,
+    hideLimitLabels: false,
+    readOnly: false,
+    disabled: false,
+    interval: 350,
+    showTicks: false,
+    showTicksValues: false,
+    ticksTooltip: null,
+    ticksValuesTooltip: null,
+    vertical: false,
+    selectionBarColor: null,
+    keyboardSupport: true,
+    scale: 1,
+    enforceRange: false,
+    noSwitching: false,
+    onlyBindHandles: false,
+    onStart: null,
+    onChange: null,
+    onEnd: null
+}
+
