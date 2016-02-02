@@ -214,7 +214,10 @@ angular.module('myAppApp')
               ( $scope.selectedDataIndex * $scope.baseInfo['increment_data_price']) +
               10 + ( $scope.selectedVoiceIndex * $scope.baseInfo['increment_minutes_price']) +
               ($scope.selectedSmsIndex * $scope.baseInfo['increment_sms_price']) ;
-          $scope.$apply();
+          if(templateName == 'template3'){
+              if (!$scope.$$phase)$scope.$apply();
+          }
+
       }
 
   });
