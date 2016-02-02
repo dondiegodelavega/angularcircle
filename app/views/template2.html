@@ -1,0 +1,123 @@
+<div class="container">
+    <div class="well border-shadow">
+        <div class="row text-center">
+            <h2 class="blue"><span class="glyphicon glyphicon-signal"></span> Base Plan</h2>
+            <h3>${{txtSubtotal | number:2}}/month</h3>
+        </div>
+        <hr/>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row  vertical-sliders">
+                            <div class="col-md-5 text-center">
+                                <div class="vertical-lefttop_text">
+                                    <h4>{{ baseInfo['data'] + (selectedDataIndex * baseInfo['increment_data']) }}<br/>GB</h4>
+                                </div>
+                                <div>
+                                    <h4>Data</h4>
+                                    <h5>{{txtChartData}}</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <rzslider
+                                        rz-slider-model="sliderData.value"
+                                        rz-slider-options="sliderData.options">
+                                </rzslider>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row  vertical-sliders">
+                            <div class="col-md-5 text-center">
+                                <div class="vertical-lefttop_text">
+                                    <h4>{{ baseInfo['minutes'] + (selectedVoiceIndex * baseInfo['increment_minutes']) }}<br/>MINS</h4>
+                                </div>
+                                <div>
+                                    <h4 >Talk</h4>
+                                    <h5 >{{txtChartVoice}}</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <rzslider
+                                        rz-slider-model="sliderVoice.value"
+                                        rz-slider-options="sliderVoice.options">
+                                </rzslider>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row  vertical-sliders">
+                            <div class="col-md-5 text-center">
+                                <div class="vertical-lefttop_text">
+                                    <h4>{{ baseInfo['sms'] + (selectedSmsIndex * baseInfo['increment_sms']) }}<br/>SMS</h4>
+                                </div>
+                                <div>
+                                    <h4>SMS</h4>
+                                    <h5>{{txtChartSms}}</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <rzslider
+                                        rz-slider-model="sliderSms.value"
+                                        rz-slider-options="sliderSms.options">
+                                </rzslider>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+                <p>This plan is customizable month to month on <a href="#">Circle Care Mobile App</a>.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="text-center">SUMMARY</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Starting base</h5>
+                        <h6>({{baseInfo['data']}} GB, {{baseInfo['minutes']}} min, {{baseInfo['sms']}} SMS)</h6>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>${{baseInfo['basicPrice'] |number:2}}/mon</h5>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>+{{selectedDataIndex}} GB Data</h5>
+                        <h5>+{{selectedVoiceIndex * baseInfo['increment_minutes']}} mins</h5>
+                        <h5>+{{selectedSmsIndex * baseInfo['increment_sms']}} SMS</h5>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>${{selectedDataIndex * baseInfo['increment_data_price'] |number:2}}/mon</h5>
+                        <h5>${{selectedVoiceIndex * baseInfo['increment_minutes_price'] |number:2}}</h5>
+                        <h5>${{selectedSmsIndex * baseInfo['increment_sms_price'] |number:2}}/mon</h5>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Total</h4>
+                        <h6>Registration Fee</h6>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>${{txtSubtotal | number:2}}/mon</h4>
+                        <h6>${{baseInfo['activation_charge'] | number:2}}</h6>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row">
+                    <div class="col-md-11"><button type="button" class="btn btn-primary btn-block">Next</button></div>
+                    <div class="col-md-1"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>

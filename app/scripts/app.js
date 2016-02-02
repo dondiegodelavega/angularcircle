@@ -10,26 +10,33 @@
  */
 angular
   .module('myAppApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+      'ngAnimate',
+      'ngCookies',
+      'ngResource',
+      'ngRoute',
+      'ngSanitize',
+      'ngTouch',
+      'rzModule'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+    .config(['$routeProvider', function ($routeProvider) {
+      $routeProvider
+          .when('/template1', {
+              templateUrl: 'views/template1.html',
+              controller: 'templateCtrl',
+              templateName: 'template1'
+          })
+          .when('/template2', {
+              templateUrl: 'views/template2.html',
+              controller: 'templateCtrl',
+              templateName: 'template2'
+          })
+          .when('/template3', {
+              templateUrl: 'views/template3.html',
+              controller: 'templateCtrl',
+              templateName: 'template3'
+          })
+          .otherwise({
+              redirectTo: '/template1'
+          });
+    }]);
+
