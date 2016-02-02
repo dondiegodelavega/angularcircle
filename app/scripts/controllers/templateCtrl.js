@@ -12,8 +12,8 @@ angular.module('myAppApp')
   .controller('templateCtrl', function ($scope, $http, $route) {
       var templateName = $route.current.$$route.templateName; // to get the template name
 
-      //$http.get('plans.json').success(onPlansSuccess); // get plans // TODO: allow origin error fix
-      $http.get('https://staging.circles.asia/plans.json').success(onPlansSuccess); // get plans // TODO: allow origin error fix
+      $http.get('plans.json').success(onPlansSuccess); // get plans // TODO: allow origin error fix
+      //$http.get('https://staging.circles.asia/plans.json').success(onPlansSuccess);
       function onPlansSuccess(data){
           sortPlans(data[0]['plans']);
           if(templateName == 'template3'){
