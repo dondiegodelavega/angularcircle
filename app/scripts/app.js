@@ -18,7 +18,7 @@ angular
       'ngTouch',
       'rzModule'
   ])
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider', '$locationProvider', function ($routeProvider ,$locationProvider) {
       $routeProvider
           .when('/template1', {
               templateUrl: 'views/template1.html',
@@ -38,5 +38,8 @@ angular
           .otherwise({
               redirectTo: '/template1'
           });
+
+        $locationProvider.html5Mode(true);
+
     }]);
 

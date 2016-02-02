@@ -1,7 +1,9 @@
 <!doctype html>
 <html ng-app="myAppApp">
   <head>
+      <base href="/">
     <meta charset="utf-8">
+
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
@@ -15,7 +17,7 @@
     <!-- build:css(.tmp) styles/main.css -->
 
       <link rel="stylesheet" href="styles/main.css">
-      <link rel="stylesheet" href="js/roundSlider/dist/roundslider.min.css" />
+      <link rel="stylesheet" href="styles/others/roundslider.min.css" />
 
       <!--<link rel="stylesheet" href="styles/template1.css">-->
       <!--<link rel="stylesheet" href="styles/template2.css">-->
@@ -40,15 +42,15 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">Circle Console</a>
+            <a class="navbar-brand" href="/">Circle Console</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-                <li><a href="#/template1">Template 1</a></li>
-                <li><a href="#/template2">Template 2</a></li>
-                <li><a href="#/template3">Template 3</a></li>
+                <li><a href="/template1">Template 1</a></li>
+                <li><a href="/template2">Template 2</a></li>
+                <li><a href="/template3">Template 3</a></li>
             </ul>
           </div>
         </div>
@@ -100,7 +102,7 @@
     <!--<script src="bower_components/angular-route-styles/route-styles.js"></script>-->
 
   <!-- jQuery plugins -->
-    <script src="js/roundSlider/dist/roundslider.min.js"></script>
+    <script src="scripts/others/roundslider.min.js"></script>
 
 
 </body>
